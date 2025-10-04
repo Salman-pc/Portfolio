@@ -4,7 +4,7 @@ import shopping_cart from '../assets/shopping_cart.jpg'
 import music from '../assets/music.jpg'
 import bmwcar from '../assets/bmwcar.jpg'
 import restuarent_food from '../assets/restuarent_food.webp'
-import swiggy from '../assets/swiggy.jpg'
+import swiggy from '../assets/Swiggy.jpg'
 import iphone from '../assets/iphone.png'
 
 
