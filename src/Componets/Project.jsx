@@ -13,7 +13,7 @@ function Project() {
         <div
 
         >
-            <div className="container max-w-screen-xl h-[100%] border-[3px] border-gray-600 rounded-lg mx-auto px-6 pb-16 pt-6 mb-3">
+            <div className="container max-w-screen-xl sm:h-[100%] sm:border-[3px] sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
 
                 <h1 className="md:text-3xl text-2xl w-full font-bold text-left mb-8">Projects</h1>
 
@@ -23,7 +23,7 @@ function Project() {
                     {ProjectsExp.slice(0,4).map(project =>
                         <motion.div
                             initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} viewport={{ once: true }}
-                            className="bg-gray-800 rounded-xl shadow-lg p-6 transition-transform duration-300">
+                            className="bg-gray-800 rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
                             <div className="flex flex-col lg:flex-row sm:flex-row md:flex-col items-start gap-4">
                                 {/* Image Section */}
                                 <div className="relative lg:w-1/2 sm:w-1/2 md:w-full lg:h-[300px] md:h-[200px] sm:h-[270px] h-[170px] w-full">

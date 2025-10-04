@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 function Home() {
 
-  const textArray = ["Frontent Developer", "Backend Developer", "Full Stack Developer"];
+  const textArray = ["Frontend Developer","Full Stack Developer","MERN Stack Developer"];
   const [currentText, setCurrentText] = useState("");
   const [index, setIndex] = useState(0);
   const [isRemoving, setIsRemoving] = useState(false);
@@ -36,9 +36,9 @@ function Home() {
 
 
   return (
-    <div className=' container mx-auto max-w-screen-xl mt-4 border-[3px] border-gray-600 rounded-lg  px-3 py-8 mb-3'>
+    <div className=' container mx-auto max-w-screen-xl mt-4 sm:border-[3px] sm:border-gray-600 rounded-lg  sm:px-3 sm:py-8 mb-3'>
       <div className=" text-white h-full w-full  ">
-        <div className=" w-full px-4 flex flex-col md:flex-row  md:justify-between  items-center justify-between">
+        <div className=" w-full sm:px-4 flex flex-col md:flex-row  md:justify-between  items-center justify-between">
           {/* Left Section */}
           <div className="  lg:w-9/12 md:w-full md:text-left">
             <div className="md:text-xl sm:text-md text-gray-400">

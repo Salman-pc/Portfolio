@@ -10,9 +10,9 @@ const Moreproject = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="container px-3 max-w-screen-xl mx-auto overflow-hidden py-10 mb-5">
+        <div className="container sm:px-3 max-w-screen-xl mx-auto overflow-hidden py-10 mb-5">
 
-            <div className='flex mb-8  item-center  gap-3'>
+            <div className='flex sm:mb-8 mb-4 item-center  gap-3'>
                 <ArrowLeft
                 onClick={()=>navigate(-1)}
                  className='text-xl cursor-pointer mt-2 ' />
@@ -26,7 +26,7 @@ const Moreproject = () => {
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} viewport={{ once: true }}
-                        className="bg-gray-800 rounded-xl shadow-lg p-6 transition-transform duration-300">
+                        className="bg-gray-800 rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
                         <div className="flex flex-col overflow-hidden lg:flex-row sm:flex-row md:flex-col items-start gap-4">
                             {/* Image Section */}
                             <div className="relative lg:w-1/2 sm:w-1/2 md:w-full lg:h-[300px] md:h-[200px] sm:h-[270px] h-[170px] w-full">
@@ -86,11 +86,11 @@ const Moreproject = () => {
                             {/* Content Section */}
                             <div className="lg:w-1/2 w-full sm:w-1/2 md:w-full">
                                 <h2 className="lg:text-2xl text-xl font-semibold mb-4">{project?.tittle}</h2>
-                                <div className="relative w-fit shadow-md rounded-md mb-4 border border-gray-600">
-                                    <div className="overflow-y-auto lg:h-[250px] h-32 md:h-44 sm:h-56 text-gray-400 p-2 scrollbar-hide">
-                                        <p>
+                                <div className="relative w-fit shadow-md w-full rounded-md mb-4 border border-gray-600">
+                                    <div className="overflow-y-auto w-full lg:h-[250px] h-32 md:h-44 sm:h-56 text-gray-400 p-2 scrollbar-hide">
+                                        <p className='w-full'>
                                             {project?.description1}                                        </p>
-                                        <p className="mt-2">
+                                        <p className="mt-2 w-full">
                                             {project?.description2}
                                         </p>
                                     </div>

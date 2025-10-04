@@ -21,7 +21,7 @@ function TechStacks() {
         <motion.div 
         initial={{opacity:0,scale:0}} whileInView={{opacity:1,scale:1}} transition={{duration:1}} viewport={{once:true}}
         className="flex flex-col mb-[12px] items-center  ">
-            <div className="container px-6 py-10 flex flex-col max-w-screen-xl  border-[3px] border-gray-600 rounded-lg items-center justify-center mx-auto">
+            <div className="container sm:px-6 sm:py-8 flex flex-col max-w-screen-xl sm:border-[3px] sm:border-gray-600 rounded-lg items-center justify-center mx-auto">
                 <h1 className="md:text-3xl text-2xl font-bold mb-8 text-left w-full">Tech Stacks</h1>
 
                 <motion.div className='flex flex-wrap justify-center md:gap-5 gap-4 items-center w-full '
