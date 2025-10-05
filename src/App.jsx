@@ -1,5 +1,5 @@
 import './App.css'
-
+import './index.css'
 import Moreproject from './Componets/Moreproject'
 import Hero from './Hero'
 import { Routes,Route } from 'react-router-dom'
