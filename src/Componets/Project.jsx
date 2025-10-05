@@ -22,7 +22,7 @@ function Project() {
                     {/* --- constructo --- */}
                     {ProjectsExp.slice(0,4).map(project =>
                         <motion.div
-                            initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} viewport={{ once: true }}
+                            initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
                             className="bg-gray-800 rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
                             <div className="flex flex-col lg:flex-row sm:flex-row md:flex-col items-start gap-4">
                                 {/* Image Section */}

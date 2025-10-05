@@ -1,13 +1,19 @@
 
 import { motion } from 'framer-motion'
 import { ProjectsExp } from '../lib/lib';
-import Project from './Project';
 import { ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Moreproject = () => {
 
     const navigate = useNavigate()
+    const {pathname}=useLocation()
+
+    useEffect(() => {
+     window.scrollTo(0,0)
+    }, [pathname])
+    
 
     return (
         <div className="container sm:px-3 max-w-screen-xl mx-auto overflow-hidden py-10 mb-5">
@@ -25,7 +31,7 @@ const Moreproject = () => {
                 {ProjectsExp?.map(project =>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} viewport={{ once: true }}
+                        initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
                         className="bg-gray-800 rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
                         <div className="flex flex-col overflow-hidden lg:flex-row sm:flex-row md:flex-col items-start gap-4">
                             {/* Image Section */}

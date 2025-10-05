@@ -11,6 +11,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^11.17.0",
     "lucide-react": "^0.544.0",
     "react": "^19.0.0",

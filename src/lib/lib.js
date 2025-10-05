@@ -8,7 +8,6 @@ import swiggy from '../assets/Swiggy.jpg'
 import iphone from '../assets/iphone.png'
 
 
-
 export const ProjectsExp = [
     {
         tittle: 'PROJECT FAIR',
