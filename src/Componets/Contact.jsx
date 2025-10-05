@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 
 function Contact() {
+    
     return (
         <div className="mb-5 flex flex-col items-center justify-center">
             <div className="container max-w-screen-xl sm:border-[3px] sm:border-gray-600 rounded-lg sm:px-6 sm:py-8 flex flex-col items-center justify-center mx-auto">
