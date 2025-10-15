@@ -3,10 +3,14 @@ import profile from '../assets/profile3.jpg'
 import resume from '../assets/resume.pdf'
 import { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from '../context/ThemeContext';
+
 
 function Home() {
 
-  const textArray = ["Frontend Developer","Full Stack Developer","MERN Stack Developer"];
+  const { theme, toggleTheme } = useTheme();
+  const textArray = ["Frontend Developer", "Full Stack Developer", "MERN Stack Developer"];
   const [currentText, setCurrentText] = useState("");
   const [index, setIndex] = useState(0);
   const [isRemoving, setIsRemoving] = useState(false);
@@ -34,10 +38,16 @@ function Home() {
     return () => clearInterval(interval);
   }, [currentText, isRemoving, index, textArray]);
 
-
   return (
-    <div className=' container mx-auto max-w-screen-xl mt-4 sm:border-[3px] sm:border-gray-600 rounded-lg  sm:px-3 sm:py-8 mb-3'>
-      <div className=" text-white h-full w-full  ">
+    <div className=' relative container mx-auto max-w-screen-xl mt-4 sm:border-[3px] sm:border-gray-600 rounded-lg  sm:px-3 sm:py-8 mb-3'>
+      <div className=" text-white h-full w-full ">
+        <button 
+          onClick={toggleTheme}
+          className="absolute md:right-2 md:top-2 right-0 -top-6 border-3 border-gray-600 p-2 rounded-lg transition duration-300 bg-gray-200 dark:bg-gray-700"
+        >
+          {theme === "light" ? <Moon className="text-gray-800" /> : <Sun className="text-yellow-500" />}
+        </button>
+
         <div className=" w-full sm:px-4 flex flex-col md:flex-row  md:justify-between  items-center justify-between">
           {/* Left Section */}
           <div className="  lg:w-9/12 md:w-full md:text-left">
