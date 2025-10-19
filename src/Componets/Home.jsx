@@ -43,7 +43,7 @@ function Home() {
       <div className=" text-white h-full w-full ">
         <button 
           onClick={toggleTheme}
-          className="absolute md:right-2 md:top-2 right-0 -top-6 border-3 border-gray-600 p-2 rounded-lg transition duration-300 bg-gray-200 dark:bg-gray-700"
+          className="absolute md:right-2 md:top-2 right-0 -top-6 border border-gray-600 p-2 rounded-lg transition duration-300 "
         >
           {theme === "light" ? <Moon className="text-gray-800" /> : <Sun className="text-yellow-500" />}
         </button>

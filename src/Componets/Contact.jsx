@@ -11,7 +11,7 @@ function Contact() {
 
                 <div className="flex flex-col md:flex-row justify-between  items-center sm:space-y-8 space-y-4 md:space-y-0 md:space-x-6 w-full h-full min-h-[400px]">
                     {/* Section One */}
-                    <div className="bg-gray-800 p-3 border-gray-500 border rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
+                    <div className=" p-3 border-gray-500 border rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
                         <div className="w-full h-full flex flex-col justify-cente items-centerr">
 
                             <motion.div
@@ -90,7 +90,7 @@ function Contact() {
                     </div>
 
                     {/* Section Two */}
-                    <div className="bg-gray-800 p-3 border border-gray-500 rounded-lg shadow-lg flex-1 flex flex-col justify-between w-full h-full">
+                    <div className=" p-3 border border-gray-500 rounded-lg shadow-lg flex-1 flex flex-col justify-between w-full h-full">
                         <h2 className="text-2xl font-bold mb-4 flex items-center">Send me a message</h2>
                         <form action="#" method="POST" className="space-y-4 flex-grow">
                             <div>
@@ -104,7 +104,7 @@ function Contact() {
                                     type="text"
                                     id="full-name"
                                     name="full-name"
-                                    className="mt-1 border border-gray-400 block w-full px-3 py-2 bg-gray-700  rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
+                                    className="mt-1 border border-gray-400 block w-full px-3 py-2   rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
                                     placeholder="Your name"
                                     required
                                 />
@@ -120,7 +120,7 @@ function Contact() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
+                                    className="mt-1 block w-full px-3 py-2  border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
                                     placeholder="Your email"
                                     required
                                 />
@@ -136,7 +136,7 @@ function Contact() {
                                     id="message"
                                     name="message"
                                     rows="4"
-                                    className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
+                                    className="mt-1 block w-full px-3 py-2  border border-gray-400 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
                                     placeholder="Your message"
                                     required
                                 ></textarea>
