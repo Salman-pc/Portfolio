@@ -2,85 +2,117 @@ import React from 'react';
 import CardSwap, { Card } from '../lib/CardSwap'
 import luminarlogo from '../assets/exp/luminar.png'
 import seclobgreenlogo from '../assets/exp/seclobgreenlogo.png'
-
+import { useExpContext } from '../context/ExpirenceContext';
+import { motion } from 'framer-motion';
 
 const Expirince = () => {
 
     const exp = [
         {
-            name: 'Luminar Technolab, Calicut',
-            role: 'Full Stack MERN Development',
+            name: "Luminar Technolab, Calicut",
+            role: "Full Stack MERN Development (Internship Training)",
             imag: luminarlogo,
-            desc: 'Successfully completed hands-on training in MERN Stack Development, covering technologies like MongoDB, Express.js, React, and Node.js. Built real-world projects, learned API integration, and gained practical experience in both frontend and backend development.',
-            dura: ' Sep 2024 – Apr 2025',
-            loca: ' Calicut, Kerala',
-            exp : '6 month'
+            desc: "Completed professional training in Full Stack MERN Development, gaining strong knowledge in MongoDB, Express.js, React, and Node.js. Focused on building and understanding full-stack workflows, API creation, and frontend-backend integration through guided assignments and hands-on exercises.",
+            dura: "Sep 2024 – Apr 2025",
+            loca: "Calicut, Kerala",
+            exp: "6 months"
         },
         {
-            name: `Seclob Technologies, Calicut,\n Cyberpark`,
-            role: 'Frontend Developer',
+            name: "Seclob Technologies, Calicut,\n Cyberpark",
+            role: "Frontend Developer",
             imag: seclobgreenlogo,
-            desc: 'Successfully completed hands-on training in MERN Stack Development, covering technologies like MongoDB, Express.js, React, and Node.js. Built real-world projects, learned API integration, and gained practical experience in both frontend and backend development.',
-            dura: 'May 2025 – Continue',
-            loca: 'Calicut, Kerala',
-            exp : '5 month'
+            desc: "Working as a Frontend Developer focused on building interactive, responsive web applications using React and Tailwind CSS. Responsible for creating reusable components, optimizing UI performance, and collaborating with the backend team for seamless API integration.",
+            dura: "May 2025 – Present",
+            loca: "Calicut, Kerala",
+            exp: "5 months"
         }
     ]
+    const {expCardidx } = useExpContext()
+
 
     return (
         <div>
-            <div className="container max-w-screen-xl sm:h-[100%] sm:border-[3px] sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
+            <div className="container max-w-screen-xl sm:h-[100%] sm:border-[3px]
+             sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
                 <h1 className="md:text-3xl text-2xl w-full font-bold text-left mb-8">Expirience</h1>
-                <div className='h-[400px] relative'
-                >
-                    <CardSwap
-                        cardDistance={60}
-                        verticalDistance={70}
-                        delay={5000}
-                        pauseOnHover={false}
-                    >
-                        {exp.map((exp, idx) => <Card >
-                            <div
-                                key={idx}
-                                className="p-4   rounded-xl shadow-md hover:shadow-lg transition-all">
-                                <div className="flex gap-3 items-center mb-2">
-                                    <img className="w-10 h-10 object-contain" src={exp?.imag} alt="Luminar Technolab Logo" />
-                                    <div>
-                                        <h3 className="text-lg  font-semibold text-gray-800 dark:text-white">
-                                            {exp?.name}
-                                        </h3>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">
-                                            {exp?.role}
+                <div className='flex w-full gap-3 flex-col lg:flex-row'>
+                    <div className='w-full'>
+                        {expCardidx == 0 && 
+                            <motion.div
+                                initial={{ opacity: 0, y: 100 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -50 }}
+                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                className='space-y-2'>
+                                <h2 className='font-semibold md:text-2xl text-xl text-white whitespace-nowrap'>{exp[0].name}</h2>
+                                <div>
+                                    <p className='text-white'>
+                                        {exp[0].desc}
+                                    </p>
+                                </div>
+                            </motion.div>}
+                        {expCardidx == 1 &&
+                            <motion.div
+                                initial={{ opacity: 0, y: 100 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -50 }}
+                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                className='space-y-2'>
+                                <h2 className='font-semibold text-white md:text-2xl text-xl text-wrap'>{exp[1].name}</h2>
+                                <div>
+                                    <p className='text-white'>
+                                        {exp[1].desc}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        }
+                    </div>
+
+                    <div className='h-[400px] w-full relative'>
+                        <CardSwap
+                            cardDistance={50}
+                            verticalDistance={70}
+                            delay={5000}
+                            pauseOnHover={true}
+                        >
+                            {exp.map((exp, idx) => <Card >
+                                <div
+                                    key={idx}
+                                    className="p-4 rounded-xl shadow-md hover:shadow-lg transition-all">
+                                    <div className="flex gap-3 items-center mb-2">
+                                        <img className="w-10 h-10 object-contain" src={exp?.imag} alt="Luminar Technolab Logo" />
+                                        <div>
+                                            <h3 className="text-lg  font-semibold text-white">
+                                                {exp?.name}
+                                            </h3>
+                                            <p className="text-sm text-gray-300">
+                                                {exp?.role}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="text-sm text-white leading-relaxed">
+                                        <p>
+                                            {exp?.desc}
+                                        </p>
+
+                                        <p className="mt-1">
+                                            <span className="block">
+                                                <strong>Duration:</strong>{exp?.dura}
+                                            </span>
+                                            <span className="block">
+                                                <strong>Expirience:</strong> {exp.exp}
+                                            </span>
+                                            <span className="block">
+                                                <strong>Location:</strong> {exp.loca}
+                                            </span>
                                         </p>
                                     </div>
                                 </div>
-
-                                <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    <p>
-                                        {exp?.desc}
-                                    </p>
-
-                                    <p className="mt-1">
-                                        <span className="block">
-                                            <strong>Duration:</strong>{exp?.dura}
-                                        </span>
-                                        <span className="block">
-                                            <strong>Expirience:</strong> {exp.exp}
-                                        </span>
-                                        <span className="block">
-                                            <strong>Location:</strong> {exp.loca}
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                        </Card>)}
-
-
-                    </CardSwap>
+                            </Card>)}
+                        </CardSwap>
+                    </div>
                 </div>
-
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 
 function Contact() {
-    
+
     return (
         <div className="mb-5 flex flex-col items-center justify-center">
             <div className="container max-w-screen-xl sm:border-[3px] sm:border-gray-600 rounded-lg sm:px-6 sm:py-8 flex flex-col items-center justify-center mx-auto">
@@ -11,13 +11,11 @@ function Contact() {
 
                 <div className="flex flex-col md:flex-row justify-between  items-center sm:space-y-8 space-y-4 md:space-y-0 md:space-x-6 w-full h-full min-h-[400px]">
                     {/* Section One */}
-                    <div className=" p-3  rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
+                    <div className=" p-3 rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
                         <div className="w-full h-full flex flex-col justify-cente items-centerr">
 
                             <motion.div
-
-                                initial={{ y: -25,opacity:0.2  }} animate={{ y: 0,opacity:1 }} transition={{ duration: "1", delay: "1" }}
-
+                                initial={{ y: -25, opacity: 0.2 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: "1", delay: "1" }}
                                 href="mailto:salmanpc124@gmail.com" className="flex shadow-xl h-1/4 items-center border-[.5px] border-gray-400 w-full rounded-lg p-5 ">
                                 <span className="text-lg font-medium">
                                     <a
@@ -38,7 +36,7 @@ function Contact() {
 
                             <div className="flex space-x-3 my-4 h-2/4 items-center justify-center">
                                 <motion.a
-                                    initial={{ x: -25 ,opacity:0.2 }} animate={{ x: 0 ,opacity:1 }} transition={{ duration: "1", delay: "1" }}
+                                    initial={{ x: -25, opacity: 0.2 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: "1", delay: "1" }}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     href="https://www.linkedin.com/in/mohammad-salman-pc/"
@@ -50,7 +48,7 @@ function Contact() {
                                     </div>
                                 </motion.a>
                                 <motion.a
-                                 initial={{y:0,opacity:0.2 }} animate={{y:0,opacity:1, rotate: 360 }} transition={{duration:"1", delay:"1"}}
+                                    initial={{ y: 0, opacity: 0.2 }} animate={{ y: 0, opacity: 1, rotate: 360 }} transition={{ duration: "1", delay: "1" }}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     href="https://github.com/Salman-pc?tab=repositories"
@@ -63,7 +61,7 @@ function Contact() {
                                 </motion.a>
                                 <motion.a
 
-                                    initial={{ x:25 ,opacity:0.2 }} animate={{ x: 0 ,opacity:1}} transition={{ duration: "1", delay: "1", }}
+                                    initial={{ x: 25, opacity: 0.2 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: "1", delay: "1", }}
                                     title="Instagram"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -76,9 +74,9 @@ function Contact() {
                                 </motion.a>
                             </div>
 
-                            <motion.div 
-                             initial={{y:25,opacity:0.2 }} animate={{y:0,opacity:1 }} transition={{duration:"1", delay:"1"}}
-                            className="flex items-center shadow-xl border-[.5px] border-gray-400 hover:outline-[1px] cursor-pointer w-full rounded-lg h-1/4 p-5 ">
+                            <motion.div
+                                initial={{ y: 25, opacity: 0.2 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: "1", delay: "1" }}
+                                className="flex items-center shadow-xl border-[.5px] border-gray-400 hover:outline-[1px] cursor-pointer w-full rounded-lg h-1/4 p-5 ">
                                 <ul className="space-y-5">
                                     <li className="flex items-center space-x-4 ">
                                         <i className="fas fa-map-marker-alt text-2xl hover:text-orange-500 text-orange-400"></i>

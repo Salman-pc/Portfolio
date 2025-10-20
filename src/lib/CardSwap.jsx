@@ -1,11 +1,12 @@
-import React, { Children, cloneElement, forwardRef, isValidElement, useEffect, useMemo, useRef } from 'react';
+import React, { Children, cloneElement, forwardRef, isValidElement, useContext, useEffect, useMemo, useRef } from 'react';
 import gsap from 'gsap';
+import  { useExpContext } from '../context/ExpirenceContext';
 
 export const Card = forwardRef(({ customClass, ...rest }, ref) => (
   <div
     ref={ref}
     {...rest}
-    className={`absolute top-14 rounded-xl border border-white bg-black [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
+    className={`absolute top-14 rounded-xl border border-gray-400 bg-black [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
   />
 ));
 Card.displayName = 'Card';
@@ -42,24 +43,25 @@ const CardSwap = ({
   easing = 'elastic',
   children
 }) => {
+
   const config =
     easing === 'elastic'
       ? {
-          ease: 'elastic.out(0.6,0.9)',
-          durDrop: 2,
-          durMove: 2,
-          durReturn: 2,
-          promoteOverlap: 0.9,
-          returnDelay: 0.05
-        }
+        ease: 'elastic.out(0.6,0.9)',
+        durDrop: 2,
+        durMove: 2,
+        durReturn: 2,
+        promoteOverlap: 0.9,
+        returnDelay: 0.05
+      }
       : {
-          ease: 'power1.inOut',
-          durDrop: 0.8,
-          durMove: 0.8,
-          durReturn: 0.8,
-          promoteOverlap: 0.45,
-          returnDelay: 0.2
-        };
+        ease: 'power1.inOut',
+        durDrop: 0.8,
+        durMove: 0.8,
+        durReturn: 0.8,
+        promoteOverlap: 0.45,
+        returnDelay: 0.2
+      };
 
   const childArr = useMemo(() => Children.toArray(children), [children]);
   const refs = useMemo(
@@ -68,6 +70,8 @@ const CardSwap = ({
     [childArr.length]
   );
 
+  const {setExpCardIdx,expCardidx}=useExpContext()
+
   const order = useRef(Array.from({ length: childArr.length }, (_, i) => i));
 
   const tlRef = useRef(null);
@@ -75,12 +79,12 @@ const CardSwap = ({
   const container = useRef(null);
 
   useEffect(() => {
+
     const total = refs.length;
     refs.forEach((r, i) => placeNow(r.current, makeSlot(i, cardDistance, verticalDistance, total), skewAmount));
 
     const swap = () => {
       if (order.current.length < 2) return;
-
       const [front, ...rest] = order.current;
       const elFront = refs[front].current;
       const tl = gsap.timeline();
@@ -94,6 +98,10 @@ const CardSwap = ({
 
       tl.addLabel('promote', `-=${config.durDrop * config.promoteOverlap}`);
       rest.forEach((idx, i) => {
+
+        console.log(expCardidx, "card index ddd");
+        setExpCardIdx(idx)
+
         const el = refs[idx].current;
         const slot = makeSlot(i, cardDistance, verticalDistance, refs.length);
         tl.set(el, { zIndex: slot.zIndex }, 'promote');
@@ -164,22 +172,23 @@ const CardSwap = ({
   const rendered = childArr.map((child, i) =>
     isValidElement(child)
       ? cloneElement(child, {
-          key: i,
-          ref: refs[i],
-          style: { width, height, ...(child.props.style ?? {}) },
-          onClick: e => {
-            child.props.onClick?.(e);
-            onCardClick?.(i);
-          }
-        })
+        key: i,
+        ref: refs[i],
+        style: { width, height, ...(child.props.style ?? {}) },
+        onClick: e => {
+          child.props.onClick?.(e);
+          onCardClick?.(i);
+        }
+      })
       : child
+
   );
 
   return (
     <div
       ref={container}
       className="absolute bottom-0 right-0 transform  origin-bottom-right perspective-[1150px] overflow-visible max-[768px]:scale-[0.75] max-[480px]:scale-[0.55]"
-      style={{ width, height }}
+      style={{ width: '290px', height: '300px' }}
     >
       {rendered}
     </div>
