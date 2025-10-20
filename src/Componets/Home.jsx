@@ -78,7 +78,7 @@ function Home() {
                   initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: 'easeOut', delay: .1 }}
                   download="Resume.pdf"
                   href={resume}
-                  className="bg-transparent border-2 max-w-fit hover:border-orange-500 border-gray-600 text-orange-400 hover:bg-orange-500 hover:text-black md:px-6 px-3 py-2 rounded-lg flex items-center space-x-2 transition"
+                  className="bg-transparent border-[1px] max-w-fit hover:border-orange-500 border-gray-600 text-orange-400 hover:bg-orange-500 hover:text-black md:px-6 px-3 py-2 rounded-lg flex items-center space-x-2 transition"
                 >
                   <span className='lg:text-md text-sm'>Download CV</span>
                   <i className="fas fa-download"></i>
@@ -128,7 +128,7 @@ function Home() {
               <img
                 src={profile}
                 alt="salman"
-                className="w-full h-full object-cover rounded-full h-full w-full"
+                className="w-full h-full object-cover rounded-full "
               />
             </div>
           </div>

@@ -13,15 +13,17 @@ const Expirince = () => {
             imag: luminarlogo,
             desc: 'Successfully completed hands-on training in MERN Stack Development, covering technologies like MongoDB, Express.js, React, and Node.js. Built real-world projects, learned API integration, and gained practical experience in both frontend and backend development.',
             dura: ' Sep 2024 – Apr 2025',
-            loca: ' Calicut, Kerala'
+            loca: ' Calicut, Kerala',
+            exp : '6 month'
         },
         {
             name: `Seclob Technologies, Calicut,\n Cyberpark`,
             role: 'Frontend Developer',
             imag: seclobgreenlogo,
             desc: 'Successfully completed hands-on training in MERN Stack Development, covering technologies like MongoDB, Express.js, React, and Node.js. Built real-world projects, learned API integration, and gained practical experience in both frontend and backend development.',
-            dura: ' May 2025 – Continue',
-            loca: ' Calicut, Kerala'
+            dura: 'May 2025 – Continue',
+            loca: 'Calicut, Kerala',
+            exp : '5 month'
         }
     ]
 
@@ -41,7 +43,7 @@ const Expirince = () => {
                             <div
                                 key={idx}
                                 className="p-4   rounded-xl shadow-md hover:shadow-lg transition-all">
-                                <div className="flex gap-3 items-center mb-3">
+                                <div className="flex gap-3 items-center mb-2">
                                     <img className="w-10 h-10 object-contain" src={exp?.imag} alt="Luminar Technolab Logo" />
                                     <div>
                                         <h3 className="text-lg  font-semibold text-gray-800 dark:text-white">
@@ -58,9 +60,12 @@ const Expirince = () => {
                                         {exp?.desc}
                                     </p>
 
-                                    <p className="mt-3">
+                                    <p className="mt-1">
                                         <span className="block">
                                             <strong>Duration:</strong>{exp?.dura}
+                                        </span>
+                                        <span className="block">
+                                            <strong>Expirience:</strong> {exp.exp}
                                         </span>
                                         <span className="block">
                                             <strong>Location:</strong> {exp.loca}

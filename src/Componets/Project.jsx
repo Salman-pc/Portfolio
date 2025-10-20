@@ -8,14 +8,14 @@ function Project() {
         <div >
             <div className="container max-w-screen-xl sm:h-[100%] sm:border-[3px] sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
                 <h1 className="md:text-3xl text-2xl w-full font-bold text-left mb-8">Projects</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 ">
 
      
                     {ProjectsExp.slice(0,4).map(project =>
                         <motion.div
                             initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-                            className="border-2 border-gray-800 rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
-                            <div className="flex flex-col lg:flex-row sm:flex-row md:flex-col items-start gap-4">
+                            className="border-2 border-gray-800 rounded-xl shadow-lg sm:p-6 md:p-3 lg:p-6 p-3 transition-transform duration-300">
+                            <div className="flex flex-col lg:flex-row sm:flex-row md:flex-col items-start gap-2">
                                 {/* Image Section */}
                                 <div className="relative lg:w-1/2 sm:w-1/2 md:w-full lg:h-[300px] md:h-[200px] sm:h-[270px] h-[170px] w-full">
                                     <div className="w-full border rounded-lg border-gray-800 h-full shadow-md">
@@ -79,7 +79,7 @@ function Project() {
                                             <p className=''>{project.description1}</p>
                                             <p className="mt-2">{project.description2}</p>
                                         </div>
-                                        <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-900 to-transparent pointer-events-none rounded-b-md"></div>
+                                        <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-950 to-transparent pointer-events-none rounded-b-md"></div>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ function Project() {
                     <Link to="/projects">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
-                            className="flex absolute right-0 gap-3 justify-center items-center px-6 py-3 border border-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-200 shadow-md">
+                            className="flex absolute right-0 gap-3 justify-center items-center px-6 py-3 border border-gray-800 text-white rounded-lg  transition-all duration-200 shadow-md">
                             <span>More</span>
                             <i className="fa-solid fa-arrow-right"></i>
                         </motion.button>

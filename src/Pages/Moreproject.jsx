@@ -32,7 +32,7 @@ const Moreproject = () => {
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-                        className=" rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
+                        className=" rounded-xl shadow-lg border border-gray-800 border-2 sm:p-6 p-3 transition-transform duration-300">
                         <div className="flex flex-col overflow-hidden lg:flex-row sm:flex-row md:flex-col items-start gap-4">
                             {/* Image Section */}
                             <div className="relative lg:w-1/2 sm:w-1/2 md:w-full lg:h-[300px] md:h-[200px] sm:h-[270px] h-[170px] w-full">
@@ -48,7 +48,7 @@ const Moreproject = () => {
                                     <a
                                         target='_blank'
                                         href={project?.githublink}
-                                        className="bg-gray-700 shadow-lg hover:bg-gray-800 text-xs px-3 py-2 rounded-lg"
+                                        className="border-1 border-gray-800 shadow-lg text-xs px-3 py-2 rounded-lg"
                                     >
                                         {/* GitHub Icon */}
                                         <svg
@@ -68,7 +68,7 @@ const Moreproject = () => {
                                     <a
                                         target='_blank'
                                         href={project.livelink}
-                                        className="bg-gray-700 shadow-lg border-gray-500 hover:bg-gray-800 text-xs px-3 py-2 rounded-lg"
+                                        className=" shadow-lg border-1 border-gray-800 text-xs px-3 py-2 rounded-lg"
                                     >
                                         {/* Live Demo Icon */}
                                         <svg
@@ -92,7 +92,7 @@ const Moreproject = () => {
                             {/* Content Section */}
                             <div className="lg:w-1/2 w-full sm:w-1/2 md:w-full">
                                 <h2 className="lg:text-2xl text-xl font-semibold mb-4">{project?.tittle}</h2>
-                                <div className="relative w-fit shadow-md w-full rounded-md mb-4 border border-gray-600">
+                                <div className="relative w-fit shadow-md w-full rounded-md mb-4 border border-gray-800">
                                     <div className="overflow-y-auto w-full lg:h-[250px] h-32 md:h-44 sm:h-56 text-gray-400 p-2 scrollbar-hide">
                                         <p className='w-full'>
                                             {project?.description1}                                        </p>
@@ -100,7 +100,7 @@ const Moreproject = () => {
                                             {project?.description2}
                                         </p>
                                     </div>
-                                    <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-800 to-transparent pointer-events-none rounded-b-md"></div>
+                                    <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-950 to-transparent pointer-events-none rounded-b-md"></div>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@ const Moreproject = () => {
                         <div className='md:mt-2'>
                             <div className="flex lg:gap-2 flex-wrap gap-2 overflow-x-scroll no-scrollbar">
                                 {project.skils.map(item =>
-                                    <span className="bg-gray-700 shadow-sm border border-gray-500 text-xs px-3 whitespace-nowrap py-2 rounded-full">{item}</span>
+                                    <span className=" shadow-sm border border-gray-500 text-xs px-3 whitespace-nowrap py-2 rounded-full">{item}</span>
                                 )}
 
                             </div>

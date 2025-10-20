@@ -11,7 +11,7 @@ function Contact() {
 
                 <div className="flex flex-col md:flex-row justify-between  items-center sm:space-y-8 space-y-4 md:space-y-0 md:space-x-6 w-full h-full min-h-[400px]">
                     {/* Section One */}
-                    <div className=" p-3 border-gray-500 border rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
+                    <div className=" p-3  rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
                         <div className="w-full h-full flex flex-col justify-cente items-centerr">
 
                             <motion.div
@@ -79,7 +79,7 @@ function Contact() {
                             <motion.div 
                              initial={{y:25,opacity:0.2 }} animate={{y:0,opacity:1 }} transition={{duration:"1", delay:"1"}}
                             className="flex items-center shadow-xl border-[.5px] border-gray-400 hover:outline-[1px] cursor-pointer w-full rounded-lg h-1/4 p-5 ">
-                                <ul className="space-y-6">
+                                <ul className="space-y-5">
                                     <li className="flex items-center space-x-4 ">
                                         <i className="fas fa-map-marker-alt text-2xl hover:text-orange-500 text-orange-400"></i>
                                         <span className="text-gray-300">Kerala, India</span>
