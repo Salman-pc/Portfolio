@@ -10,7 +10,7 @@ function Project() {
                 <h1 className="md:text-3xl text-2xl w-full font-bold text-left mb-8">Projects</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
 
-                    {/* --- constructo --- */}
+     
                     {ProjectsExp.slice(0,4).map(project =>
                         <motion.div
                             initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}

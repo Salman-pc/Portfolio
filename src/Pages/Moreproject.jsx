@@ -32,7 +32,7 @@ const Moreproject = () => {
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-                        className="bg-gray-800 rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
+                        className=" rounded-xl shadow-lg sm:p-6 p-3 transition-transform duration-300">
                         <div className="flex flex-col overflow-hidden lg:flex-row sm:flex-row md:flex-col items-start gap-4">
                             {/* Image Section */}
                             <div className="relative lg:w-1/2 sm:w-1/2 md:w-full lg:h-[300px] md:h-[200px] sm:h-[270px] h-[170px] w-full">
