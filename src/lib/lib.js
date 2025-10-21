@@ -10,7 +10,7 @@ import iphone from '../assets/iphone.png'
 
 export const ProjectsExp = [
     {
-        tittle: 'PROJECT FAIR',
+        tittle: 'Project Fair',
         description1: "Project Fair is a dedicated platform that allows developers and tech enthusiasts to present their projects in a structured and professional manner. It provides an intuitive interface where users can upload their work, describe their projects, and highlight key technologies used.Built with React.js for the frontend and Node.js / Express.js for the backend, Project Fair ensures a smooth and responsive user experience.MongoDB is used for data storage, allowing efficient management of user projects.The platform also includes user authentication via JSON Web Tokens(JWT) for secure access and profile management.",
         description2: 'One of the core features of Project Fair is its project listing and categorization system, which enables users to browse projects based on technologies and categories. Additionally, users can add images, detailed descriptions, and relevant links to enhance their project presentations.',
         skils: ["React", "Bootstrap", "Mongo DB", "Express", "Node js", "ContextAPI"],
