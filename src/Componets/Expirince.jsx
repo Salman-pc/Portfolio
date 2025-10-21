@@ -58,9 +58,9 @@ const Expirince = () => {
                                 exit={{ opacity: 0, y: -50 }}
                                 transition={{ duration: 0.8, ease: "easeInOut" }}
                                 className='space-y-2'>
-                                <h2 className='font-semibold text-white md:text-2xl text-xl text-wrap'>{exp[1].name}</h2>
+                                <h2 className='font-semibold text-gray-200 md:text-2xl text-xl text-wrap'>{exp[1].name}</h2>
                                 <div>
-                                    <p className='text-white'>
+                                    <p className='text-gray-400'>
                                         {exp[1].desc}
                                     </p>
                                 </div>
@@ -92,7 +92,7 @@ const Expirince = () => {
                                     </div>
 
                                     <div className="text-sm text-white leading-relaxed">
-                                        <p className='text-md'>
+                                        <p className='text-md '>
                                             {exp?.desc}
                                         </p>
 
