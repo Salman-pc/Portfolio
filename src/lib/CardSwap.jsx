@@ -189,7 +189,7 @@ const CardSwap = ({
       ref={container}
       className="relative transform perspective-[1200px] overflow-visible
                  flex items-center justify-center
-                 sm:scale-[0.7] scale-75 mx-auto md:scale-[1] "
+                 sm:scale-[0.7] scale-[.6] mx-auto md:scale-[1] "
     >
       {rendered}
     </div>
