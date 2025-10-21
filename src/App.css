@@ -1,9 +1,13 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Edu NSW ACT Foundation", cursive;
   font-optical-sizing: auto;
 
 }
 
+h1{
+   font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
 
 
 .scrollbar-hide {
