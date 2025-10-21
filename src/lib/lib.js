@@ -10,6 +10,16 @@ import iphone from '../assets/iphone.png'
 
 export const ProjectsExp = [
     {
+        tittle: 'Seclob Super Admin Dashboard - Multi-Service Management Platform',
+        description1: "Developed a comprehensive React-based super admin dashboard for managing multiple service categories including salons, resellers, and service partners with real-time analytics and user management capabilities",
+        description2: '.',
+        skils: ["React", "Talwind css","JavaScript", "Mongo DB", "Express", "Node js", "ContextAPI"],
+        githublink: '',
+        livelink: 'https://superadmin.seclob.com/',
+        image: project_fair,
+        priority: 1
+    },
+    {
         tittle: 'Project Fair',
         description1: "Project Fair is a dedicated platform that allows developers and tech enthusiasts to present their projects in a structured and professional manner. It provides an intuitive interface where users can upload their work, describe their projects, and highlight key technologies used.Built with React.js for the frontend and Node.js / Express.js for the backend, Project Fair ensures a smooth and responsive user experience.MongoDB is used for data storage, allowing efficient management of user projects.The platform also includes user authentication via JSON Web Tokens(JWT) for secure access and profile management.",
         description2: 'One of the core features of Project Fair is its project listing and categorization system, which enables users to browse projects based on technologies and categories. Additionally, users can add images, detailed descriptions, and relevant links to enhance their project presentations.',
