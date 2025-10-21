@@ -1,7 +1,8 @@
 body {
-  font-family: "Smooch Sans", sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-optical-sizing: auto;
-
+font-variation-settings:
+    "wdth" 100;
 }
 
 .scrollbar-hide {
