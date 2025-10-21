@@ -1,36 +1,53 @@
+body {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+
+}
+
 .scrollbar-hide {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
-  }
-  .filter-white {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%) contrast(100%);
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, and Opera */
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%) contrast(100%);
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch;
+  background-color: transparent;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
   }
 
-  .blinking-cursor {
-    display: inline-block;
-    width: 1ch;
-    background-color: transparent;
-    animation: blink 1s steps(2) infinite;
+  51%,
+  100% {
+    opacity: 0;
   }
+}
 
-  @keyframes blink {
-    0%, 50% {
-      opacity: 1;
-    }
-    51%, 100% {
-      opacity: 0;
-    }
-  }
+.no-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
 
-  .no-scrollbar {
-    scrollbar-width: none;        /* Firefox */
-    -ms-overflow-style: none;     /* Internet Explorer 10+ */
-  }
-  
-  .no-scrollbar::-webkit-scrollbar { /* Chrome, Safari, Opera */
-    display: none;
-  }
-  
+.no-scrollbar::-webkit-scrollbar {
+  /* Chrome, Safari, Opera */
+  display: none;
+}
