@@ -6,7 +6,7 @@ function Contact() {
 
     return (
         <div className="mb-5 flex flex-col items-center justify-center">
-            <div className="container max-w-screen-xl sm:border-[3px] sm:border-gray-600 rounded-lg sm:px-6 sm:py-8 flex flex-col items-center justify-center mx-auto">
+            <div className="container max-w-screen-xlsm:border-gray-600 rounded-lg sm:px-6 sm:py-8 flex flex-col items-center justify-center mx-auto">
                 <h1 className="md:text-3xl text-2xl font-bold text-left w-full sm:mb-8 mb-6">Get in Touch</h1>
 
                 <div className="flex flex-col md:flex-row justify-between  items-center sm:space-y-8 space-y-4 md:space-y-0 md:space-x-6 w-full h-full min-h-[400px]">

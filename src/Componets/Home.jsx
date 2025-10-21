@@ -39,7 +39,7 @@ function Home() {
   }, [currentText, isRemoving, index, textArray]);
 
   return (
-    <div className=' relative container mx-auto max-w-screen-xl mt-4 sm:border-[3px] sm:border-gray-600 rounded-lg  sm:px-3 sm:py-8 mb-3'>
+    <div className=' relative container mx-auto max-w-screen-xl mt-4  sm:border-gray-600 rounded-lg  sm:px-3 sm:py-8 mb-3'>
       <div className=" text-white h-full w-full ">
         <button 
           onClick={toggleTheme}

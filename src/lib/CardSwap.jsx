@@ -1,12 +1,13 @@
 import React, { Children, cloneElement, forwardRef, isValidElement, useContext, useEffect, useMemo, useRef } from 'react';
 import gsap from 'gsap';
-import  { useExpContext } from '../context/ExpirenceContext';
+import { useExpContext } from '../context/ExpirenceContext';
 
 export const Card = forwardRef(({ customClass, ...rest }, ref) => (
   <div
     ref={ref}
     {...rest}
-    className={`absolute top-14 rounded-xl border border-gray-400 bg-black [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
+    className={`absolute top-14 rounded-xl border border-gray-400 bg-black [transform-style:preserve-3d]
+       [will-change:transform] [backface-visibility:hidden] ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
   />
 ));
 Card.displayName = 'Card';
@@ -32,8 +33,8 @@ const placeNow = (el, slot, skew) =>
   });
 
 const CardSwap = ({
-  width = 400,
-  height = 300,
+  width = 500,
+  height = 330,
   cardDistance = 50,
   verticalDistance = 70,
   delay = 5000,
@@ -70,7 +71,7 @@ const CardSwap = ({
     [childArr.length]
   );
 
-  const {setExpCardIdx,expCardidx}=useExpContext()
+  const { setExpCardIdx, expCardidx } = useExpContext()
 
   const order = useRef(Array.from({ length: childArr.length }, (_, i) => i));
 
@@ -99,7 +100,6 @@ const CardSwap = ({
       tl.addLabel('promote', `-=${config.durDrop * config.promoteOverlap}`);
       rest.forEach((idx, i) => {
 
-        console.log(expCardidx, "card index ddd");
         setExpCardIdx(idx)
 
         const el = refs[idx].current;
@@ -181,16 +181,16 @@ const CardSwap = ({
         }
       })
       : child
-
   );
 
   return (
-    <div
-      ref={container}
-      className="absolute bottom-0 right-0 transform  origin-bottom-right perspective-[1150px] overflow-visible max-[768px]:scale-[0.75] max-[480px]:scale-[0.55]"
-      style={{ width: '290px', height: '300px' }}
-    >
-      {rendered}
+    <div className=" h-[300px] md:h-[400px] mx-auto w-[200px] flex justify-center ">
+      <div
+        ref={container}
+        className="relative transform overflow-visible flex items-center justify-center  "
+      >
+        {rendered}
+      </div>
     </div>
   );
 };

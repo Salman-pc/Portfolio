@@ -27,17 +27,17 @@ const Expirince = () => {
             exp: "5 months"
         }
     ]
-    const {expCardidx } = useExpContext()
+    const { expCardidx } = useExpContext()
 
 
     return (
         <div>
-            <div className="container max-w-screen-xl sm:h-[100%] sm:border-[3px]
+            <div className="container max-w-screen-xl sm:h-[100%] f
              sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
                 <h1 className="md:text-3xl text-2xl w-full font-bold text-left mb-8">Expirience</h1>
                 <div className='flex w-full gap-3 flex-col lg:flex-row'>
                     <div className='w-full'>
-                        {expCardidx == 0 && 
+                        {expCardidx == 0 &&
                             <motion.div
                                 initial={{ opacity: 0, y: 100 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ const Expirince = () => {
                         }
                     </div>
 
-                    <div className='h-[400px] w-full relative'>
+                    <div className='w-full relative '>
                         <CardSwap
                             cardDistance={50}
                             verticalDistance={70}
@@ -82,31 +82,34 @@ const Expirince = () => {
                                     <div className="flex gap-3 items-center mb-2">
                                         <img className="w-10 h-10 object-contain" src={exp?.imag} alt="Luminar Technolab Logo" />
                                         <div>
-                                            <h3 className="text-lg  font-semibold text-white">
+                                            <h3 className="text-xl  font-semibold text-white">
                                                 {exp?.name}
                                             </h3>
-                                            <p className="text-sm text-gray-300">
+                                            <p className="text-md text-gray-300">
                                                 {exp?.role}
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="text-sm text-white leading-relaxed">
-                                        <p>
+                                        <p className='text-md'>
                                             {exp?.desc}
                                         </p>
 
-                                        <p className="mt-1">
-                                            <span className="block">
-                                                <strong>Duration:</strong>{exp?.dura}
-                                            </span>
-                                            <span className="block">
-                                                <strong>Expirience:</strong> {exp.exp}
-                                            </span>
-                                            <span className="block">
-                                                <strong>Location:</strong> {exp.loca}
-                                            </span>
-                                        </p>
+                                        <div className="mt-1 grid gap-1">
+                                            <div className="grid grid-cols-[auto_1fr]">
+                                                <strong className="w-28 text-gray-400">Duration</strong>
+                                                <span>{exp?.dura}</span>
+                                            </div>
+                                            <div className="grid grid-cols-[auto_1fr]">
+                                                <strong className="w-28 text-gray-400">Experience</strong>
+                                                <span>{exp.exp}</span>
+                                            </div>
+                                            <div className="grid grid-cols-[auto_1fr]">
+                                                <strong className="w-28 text-gray-400">Location</strong>
+                                                <span>{exp.loca}</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </Card>)}
