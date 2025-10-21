@@ -34,7 +34,7 @@ const Expirince = () => {
         <div>
             <div className="container max-w-screen-xl sm:h-[100%] f
              sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
-                <h1 className="md:text-3xl text-2xl w-full font-bold text-left mb-8">Expirience</h1>
+                <h1 className="md:text-3xl text-2xl w-full font-bold text-left md:my-5 my-3">Expirience</h1>
                 <div className='flex w-full gap-3 flex-col lg:flex-row'>
                     <div className='w-full'>
                         {expCardidx == 0 &&

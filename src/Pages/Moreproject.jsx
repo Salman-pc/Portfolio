@@ -18,7 +18,7 @@ const Moreproject = () => {
     return (
         <div className="container sm:px-3 max-w-screen-xl mx-auto overflow-hidden py-10 mb-5">
 
-            <div className='flex sm:mb-8 mb-4 item-center  gap-3'>
+            <div className='flex sm:md:my-5 my-3 mb-4 item-center  gap-3'>
                 <ArrowLeft
                 onClick={()=>navigate(-1)}
                  className='text-xl cursor-pointer mt-2 ' />
