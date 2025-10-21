@@ -6,7 +6,7 @@ export const Card = forwardRef(({ customClass, ...rest }, ref) => (
   <div
     ref={ref}
     {...rest}
-    className={`absolute top-14 rounded-xl border border-gray-400 bg-black [transform-style:preserve-3d]
+    className={`absolute top-14 w-full rounded-xl border border-gray-400 bg-black [transform-style:preserve-3d]
        [will-change:transform] [backface-visibility:hidden] ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
   />
 ));
@@ -114,7 +114,7 @@ const CardSwap = ({
             duration: config.durMove,
             ease: config.ease
           },
-          `promote+=${i * 0.15}`
+          `promote+=${i * 0.15}` 
         );
       });
 
@@ -184,14 +184,16 @@ const CardSwap = ({
   );
 
   return (
-    <div className=" h-[300px] md:h-[400px] mx-auto w-[200px] flex justify-center ">
-      <div
-        ref={container}
-        className="relative transform overflow-visible flex items-center justify-center  "
-      >
-        {rendered}
-      </div>
+ <div className="w-full h-[300px] md:h-[400px] ml-[25%] flex items-center justify-center relative ">
+    <div
+      ref={container}
+      className="relative transform perspective-[1200px] overflow-visible
+                 flex items-center justify-center
+                 scale-[0.7] mx-auto md:scale-[1] "
+    >
+      {rendered}
     </div>
+  </div>
   );
 };
 
