@@ -77,7 +77,6 @@ function Project() {
                                     </h2>
 
                                     <div className='relative'>
-
                                         <div className="relative w-full  shadow-md rounded-md mb-4 border border-gray-600">
                                             <div className="overflow-y-auto lg:h-[250px] h-32 md:h-44 sm:h-56 text-gray-400 p-2 scrollbar-hide">
                                                 <p className='text-sm'>{project.description1}</p>
@@ -85,10 +84,7 @@ function Project() {
                                             </div>
                                             <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-950 to-transparent pointer-events-none rounded-b-md"></div>
                                         </div>
-
                                     </div>
-
-
 
                                 </div>
                             </div>

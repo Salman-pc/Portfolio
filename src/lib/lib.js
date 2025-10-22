@@ -10,14 +10,24 @@ import iphone from '../assets/iphone.png'
 
 export const ProjectsExp = [
     {
-        title: 'Seclob Super Admin - Multi-Service Management Platform',
+        title: 'Seclob Super Admin - Multi-Service Management Platform (Live)',
         description1: "Seclob super admin for managing multiple services.categories including e-cards , salons, resellers, and service partners with real-time analytics and user management capabilities",
         description2: '',
-        skils: ["React", "Talwind css","JavaScript", "ContextAPI"],
+        skils: ["Full stack","React", "Talwind css","JavaScript", "ContextAPI"],
         githublink: '',
         livelink: 'https://superadmin.seclob.com/',
         image: project_fair,
-        priority: 1
+        priority: -1
+    },
+    {
+        title: 'E-card (Live)',
+        description1: "Seclob is a suite of digital products designed to simplify and enhance business and personal services. The platform includes Seclob Falah Card, Seclob Nest, Seclob MenuX, Seclob Events-Card, and Seclob Smart Card, each offering a dedicated Admin Panel for managing services, users, and analytics (built with React.js, Tailwind, and JavaScript) and a User Panel for seamless interaction (built with Next.js, Tailwind, and TypeScript). Users can access digital business cards, restaurant menus, e-commerce solutions, and event management tools—all within a unified ecosystem.",
+        description2: '',
+        skils: ["Full stack","React","Talwind css","JavaScript", "ContextAPI","Next js","TypeScript"],
+        githublink: '',
+        livelink: 'https://www.member.seclob.com/',
+        image: project_fair,
+        priority: 0
     },
     {
         title: 'Project Fair',
@@ -31,8 +41,8 @@ export const ProjectsExp = [
     },
     {
         title: 'Constructo',
-        description1: "Coming soon.....!!",
-        description2: '',
+        description1: "Constructo is a full-stack platform designed to connect users and workers for construction-related services. It enables users to easily find and hire skilled professionals such as plumbers, electricians, and painters for building projects like homes and apartments.",
+        description2: 'The platform includes three main modules — Admin, Worker, and User. Users can search for workers, view detailed profiles, and communicate through real-time chat for project discussions. The admin panel manages users, workers, and service requests efficiently. Developed with a focus on scalability, clean architecture, and real-time functionality, this project strengthened my full-stack development skills and understanding of real-world service management systems.',
         skils: ["MERN", "Tailwind CSS", "Socket Io", "ContextAPI"],
         githublink: 'https://github.com/Salman-pc/Cunstructo',
         livelink: 'https://cunstructo.vercel.app/',
@@ -67,7 +77,7 @@ export const ProjectsExp = [
         githublink: 'https://i-phone-ind-clone-qrg0wz5kj-salman-pcs-projects.vercel.app',
         livelink: 'https://github.com/Salman-pc/iPhone-ind-_clone',
         image: iphone,
-        priority: 4
+        priority: 5
     },
     {
         title: 'Swigy_clone',
@@ -77,7 +87,7 @@ export const ProjectsExp = [
         githublink: 'https://github.com/Salman-pc/Swigy',
         livelink: 'https://swigy-three.vercel.app/',
         image: swiggy,
-        priority: 4
+        priority: 6
     },
     {
         title: 'BMW India_Clone',
@@ -87,7 +97,7 @@ export const ProjectsExp = [
         githublink: 'https://github.com/Salman-pc/Bmw-ind-_clone',
         livelink: 'https://bmw-ind-clone.vercel.app/',
         image: bmwcar,
-        priority: 4
+        priority: 7
     },
     {
         title: 'Restaurant App',
@@ -97,6 +107,6 @@ export const ProjectsExp = [
         githublink: 'https://github.com/Salman-pc/Restaurant-app',
         livelink: '',
         image: restuarent_food,
-        priority: 4
+        priority: 8
     },
 ]
