@@ -6,12 +6,12 @@ function Contact() {
 
     return (
         <div className="mb-5 flex flex-col items-center justify-center">
-            <div className="container max-w-screen-xlsm:border-gray-600 rounded-lg sm:px-6 sm:py-8 flex flex-col items-center justify-center mx-auto">
+            <div className="container max-w-screen-xl sm:border-gray-600 rounded-lg sm:px-6 sm:py-8 flex flex-col items-center justify-center mx-auto">
                 <h1 className="md:text-3xl text-2xl font-bold text-left w-full sm:md:my-5 my-3 mb-6">Get in Touch</h1>
 
                 <div className="flex flex-col md:flex-row justify-between  items-center sm:space-y-8 space-y-4 md:space-y-0 md:space-x-6 w-full h-full min-h-[400px]">
                     {/* Section One */}
-                    <div className=" p-3 rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
+                    <div className=" md:p-3  rounded-lg shadow-lg flex-1 flex items-center justify-center w-full h-[455px]">
                         <div className="w-full h-full flex flex-col justify-cente items-centerr">
 
                             <motion.div

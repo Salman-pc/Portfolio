@@ -6,12 +6,11 @@ import { ProjectsExp } from '../lib/lib'
 function Project() {
     return (
         <div >
-            <div className="container max-w-screen-xl sm:h-[100%]sm:border-gray-600 rounded-lg mx-auto sm:px-6 sm:pb-16 pb-16 sm:pt-6 mb-3">
+            <div className="container max-w-screen-xl sm:h-[100%] sm:border-gray-600 rounded-lg mx-auto sm:px-6 pb-8 sm:pt-6 mb-3">
                 <h1 className="md:text-3xl text-2xl w-full font-bold text-left md:my-5 my-3">Projects</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 ">
 
-     
-                    {ProjectsExp.slice(0,4).map(project =>
+                    {ProjectsExp.slice(0, 4).map(project =>
                         <motion.div
                             initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
                             className="border-2 border-gray-800 rounded-xl shadow-lg sm:p-6 md:p-3 lg:p-6 p-3 transition-transform duration-300">
@@ -72,15 +71,25 @@ function Project() {
                                 </div>
 
                                 {/* Content Section */}
-                                <div className="lg:w-1/2 w-full sm:w-1/2 md:w-full">
-                                    <h2 className="lg:text-2xl text-xl font-semibold mb-4">{project?.tittle}</h2>
-                                    <div className="relative w-full shadow-md rounded-md mb-4 border border-gray-600">
-                                        <div className="overflow-y-auto lg:h-[250px] h-32 md:h-44 sm:h-56 text-gray-400 p-2 scrollbar-hide">
-                                            <p className=''>{project.description1}</p>
-                                            <p className="mt-2">{project.description2}</p>
+                                <div className="lg:w-1/2 relative w-full sm:w-1/2 md:w-full">
+                                    <h2 className="lg:text-lg text-md font-semibold mb-4 line-clamp-1  overflow-hidden hover:line-clamp-none  hover:bg-black z-10">
+                                        {project?.title}
+                                    </h2>
+
+                                    <div className='relative'>
+
+                                        <div className="relative w-full  shadow-md rounded-md mb-4 border border-gray-600">
+                                            <div className="overflow-y-auto lg:h-[250px] h-32 md:h-44 sm:h-56 text-gray-400 p-2 scrollbar-hide">
+                                                <p className='text-sm'>{project.description1}</p>
+                                                <p className="mt-2 text-sm">{project.description2}</p>
+                                            </div>
+                                            <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-950 to-transparent pointer-events-none rounded-b-md"></div>
                                         </div>
-                                        <div className="absolute bottom-0 left-0 w-full h-[37.5%] bg-gradient-to-t from-gray-950 to-transparent pointer-events-none rounded-b-md"></div>
+
                                     </div>
+
+
+
                                 </div>
                             </div>
                             {/* Tech Used for Restaurant App */}
