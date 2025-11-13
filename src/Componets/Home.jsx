@@ -43,9 +43,9 @@ function Home() {
       <div className=" text-white h-full w-full ">
         <button 
           onClick={toggleTheme}
-          className="absolute md:right-2 md:top-2 right-0 -top-6 border border-gray-600 p-2 rounded-lg transition duration-300 "
+          className="absolute md:right-2 md:top-2 right-0 -top-6 border border-gray-600 p-2 rounded-lg transition duration-300 hover:bg-gray-100 dark:hover:bg-gray-800"
         >
-          {theme === "light" ? <Moon className="text-gray-800" /> : <Sun className="text-yellow-500" />}
+          {theme === "light" ? <Moon className="text-gray-800 dark:text-white" /> : <Sun className="text-yellow-500" />}
         </button>
 
         <div className=" w-full sm:px-4 flex flex-col md:flex-row  md:justify-between  items-center justify-between">
@@ -71,6 +71,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-6 flex items-center flex-row justify-start space-x-3">
+              
               <div>
                 <motion.a
                   whileTap={{ scale: .8 }}
@@ -119,6 +120,7 @@ function Home() {
                   <i className="fab fa-linkedin"></i>
                 </a>
               </div>
+
             </div>
           </div>
 
