@@ -100,6 +100,7 @@ function TechStacks() {
             },
         },
     }
+
     const techstackinnerVarients = {
         hidden: { opacity: 0 }, show: { opacity: 1 }
     }
@@ -116,7 +117,7 @@ function TechStacks() {
                     initial="hidden"
                     animate="show"
                 >
-                    {techStacks.map((tech, index) => (
+                    {techStacks?.map((tech, index) => (
                         <motion.div 
                             key={index}
                             className="rounded-lg flex flex-col items-center justify-center md:p-4 p-2 shadow-md transform transition-transform hover:-translate-y-2"

@@ -24,7 +24,7 @@ const Expirince = () => {
             desc: "Working as a Frontend Developer focused on building interactive, responsive web applications using React and Tailwind CSS. Responsible for creating reusable components, optimizing UI performance, and collaborating with the backend team for seamless API integration.",
             dura: "May 2025 – Present",
             loca: "Calicut, Kerala",
-            exp: "5 months"
+            exp: "10 months"
         }
     ]
     const { expCardidx } = useExpContext()
